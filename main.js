@@ -220,6 +220,8 @@ function tween() {
     requestAnimationFrame(tween);
 }
 
+let xTo = gsap.quickTo(".cursor", "x", { duration: 0.6, ease: "power3" });
+let yTo = gsap.quickTo(".cursor", "y", { duration: 0.6, ease: "power3" });
 
 if (isTouchDevice) {
     document.addEventListener('touchstart', firstCoords)
@@ -265,8 +267,6 @@ links.forEach((link) => {
 gsap.set(".cursor", { xPercent: 0, yPercent: 20 });
 
 
-let xTo = gsap.quickTo(".cursor", "x", { duration: 0.6, ease: "power3" }),
-    yTo = gsap.quickTo(".cursor", "y", { duration: 0.6, ease: "power3" });
 
 window.addEventListener("mousemove", (e) => {
     xTo(e.clientX);

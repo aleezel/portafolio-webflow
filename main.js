@@ -227,13 +227,12 @@ if (isTouchDevice) {
     document.addEventListener('touchstart', firstCoords)
     document.addEventListener('touchmove', showCoordinates)
     tween();
-    xTo(e.touches[0].clientX);
-    yTo(e.touches[0].clientY);
+    // xTo(e.touches[0].clientX);
+    // yTo(e.touches[0].clientY);
 
 } else {
     document.addEventListener("mousemove", move);
     tweenDesktop();
-
 }
 
 

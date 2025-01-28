@@ -80,7 +80,7 @@ isClicked.from(".menu-dropdown", { display: "none", y: "8rem", duration: 0 })
 
 const gifContainer = document.getElementById("animicon-container")
 const gifElement = document.getElementById("menu-icon")
-console.log(gifElement, gifContainer)
+// console.log(gifElement, gifContainer)
 const gif = new SuperGif({ gif: gifElement })
 const FRAME_RATE = 180
 
@@ -121,7 +121,7 @@ let intervalId = null;
 let isMenuActive = false;
 const frameController = (currentActionType) => {
     clearInterval(intervalId)
-    console.log(currentActionType)
+    // console.log(currentActionType)
     if (currentActionType === "mouseover") {
         intervalId = setInterval(frameUpdateLogic, FRAME_RATE, 6, 7)
     }
@@ -132,13 +132,13 @@ const frameController = (currentActionType) => {
         intervalId = setInterval(frameUpdateLogic, FRAME_RATE, 6, 8)
         isClicked.play();
         isMenuActive = true
-        console.log("click 1")
+        // console.log("click 1")
     }
     else if (currentActionType === "click" && isMenuActive) {
         intervalId = setInterval(frameUpdateLogic, FRAME_RATE, 0, 1)
         isClicked.reverse();
         isMenuActive = false
-        console.log("click 2")
+        // console.log("click 2")
     }
 }
 
